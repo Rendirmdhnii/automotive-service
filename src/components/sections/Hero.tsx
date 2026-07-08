@@ -56,10 +56,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50/80 mb-8 shadow-sm"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-mint/20 bg-brand-mint/5 mb-8 shadow-sm"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-          <span className="font-poppins text-xs font-bold uppercase tracking-[0.25em] text-gray-500">
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+          <span className="font-poppins text-xs font-bold uppercase tracking-[0.25em] text-brand-mint-dark">
             KALIAN SEMUA LUAR BIASA
           </span>
         </motion.div>
@@ -73,7 +73,7 @@ export default function Hero() {
         >
           <span className="text-gray-900">INGAT BENGKEL MOBIL,</span>
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint via-brand-mint-light to-brand-mint-dark text-glow-mint">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
             INGAT IPIN MOTOR.
           </span>
         </motion.h1>
@@ -93,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-100/80 text-emerald-800 border border-emerald-200/50 font-poppins text-xs font-bold uppercase tracking-wider mb-10"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-brand-mint/10 text-brand-mint-dark border border-brand-mint/20 font-poppins text-xs font-bold uppercase tracking-wider mb-10"
         >
           BENGKEL BUKA: 08.00 - 23.00 WIB
         </motion.div>
@@ -109,20 +109,20 @@ export default function Hero() {
           <a
             href="#booking"
             onClick={(e) => scrollToSection(e, "#booking")}
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gray-900 hover:bg-black text-white font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_20px_rgba(0,0,0,0.15)] group"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 h-14 px-8 rounded-xl bg-gray-900 hover:bg-black text-white font-poppins font-semibold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_20px_rgba(0,0,0,0.12)] group"
           >
             <Calendar className="w-5 h-5 transition-transform group-hover:scale-110" />
             Booking Servis
           </a>
 
-          {/* Panggil Towing - Urgent Red */}
+          {/* Panggil Towing - Urgent Rose Red */}
           <a
             href="#towing"
             onClick={(e) => scrollToSection(e, "#towing")}
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-red-light text-white font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_25px_rgba(220,38,38,0.25)] relative overflow-hidden group"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 h-14 px-8 rounded-xl bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white font-poppins font-semibold text-base transition-all duration-300 transform hover:-translate-y-1 hover:brightness-110 shadow-[0_6px_25px_rgba(225,29,72,0.25)] relative overflow-hidden group"
           >
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            <PhoneCall className="w-5 h-5 animate-bounce" />
+            <PhoneCall className="w-5 h-5 transition-transform group-hover:scale-110" />
             Panggil Towing (24J)
           </a>
 
@@ -131,7 +131,7 @@ export default function Hero() {
             href="https://api.whatsapp.com/send/?phone=6282338325621"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border-2 border-gray-900 bg-transparent hover:bg-gray-50 text-gray-900 font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 group"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 h-14 px-8 rounded-xl border-2 border-gray-900 bg-transparent hover:bg-gray-50 text-gray-900 font-poppins font-semibold text-base transition-all duration-300 transform hover:-translate-y-1 group"
           >
             <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
             Hubungi Admin
