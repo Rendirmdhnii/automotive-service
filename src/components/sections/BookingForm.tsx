@@ -35,17 +35,14 @@ export default function BookingForm() {
 
   const onSubmit = async (data: BookingFormData) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    const text = `*BOOKING SERVIS - IPIN MOTOR*
----------------------------------------
-👤 *Nama:* ${data.name}
-📞 *Nomor HP:* ${data.phone}
-🚗 *Jenis Mobil:* ${data.carType}
-🛠️ *Keluhan:* ${data.issue}
-📅 *Tanggal:* ${data.date}
-⏰ *Jam:* ${data.time}
----------------------------------------
-_Mohon konfirmasi ketersediaan jadwal slot mekanik._`;
+    const text = `Halo Admin IPIN MOTOR, saya ingin melakukan booking servis dengan detail berikut:
+Nama: ${data.name}
+Nomor HP: ${data.phone}
+Jenis Mobil: ${data.carType}
+Tanggal Servis: ${data.date}
+Jam Kedatangan: ${data.time}
+Keluhan: ${data.issue}
+Mohon konfirmasinya, terima kasih.`;
 
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://api.whatsapp.com/send/?phone=6282338325621&text=${encodedText}`;
