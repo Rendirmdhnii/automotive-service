@@ -4,59 +4,11 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search } from "lucide-react";
 import Image from "next/image";
+import { ASSETS } from "@/lib/assets";
 
 const CATEGORIES = ["Semua", "Servis", "Towing", "Fasilitas"];
 
-const GALLERY_ITEMS = [
-  {
-    id: 1,
-    title: "Bengkel & Area Kerja",
-    category: "Fasilitas",
-    image: "https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 2,
-    title: "Diagnosa Scanner Engine",
-    category: "Servis",
-    image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 3,
-    title: "Armada Towing Flatbed",
-    category: "Towing",
-    image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 4,
-    title: "Spooring & Alignment Roda",
-    category: "Servis",
-    image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 5,
-    title: "Servis Sistem AC Mobil",
-    category: "Servis",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 6,
-    title: "Stok Sparepart Orisinal",
-    category: "Fasilitas",
-    image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 7,
-    title: "Ruang Tunggu Premium",
-    category: "Fasilitas",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 8,
-    title: "Penyerahan Kunci Pelanggan",
-    category: "Servis",
-    image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
-  },
-];
+const GALLERY_ITEMS = ASSETS.gallery;
 
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState("Semua");

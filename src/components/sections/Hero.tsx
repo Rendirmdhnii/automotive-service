@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, PhoneCall, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { ASSETS } from "@/lib/assets";
 
 export default function Hero() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -24,6 +26,17 @@ export default function Hero() {
       id="hero"
       className="relative min-screen-dynamic-height pt-36 pb-20 flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50/20 to-white"
     >
+      {/* Background Image Asset with low opacity for premium overlay */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <Image
+          src={ASSETS.heroBg}
+          alt="IPIN MOTOR Bengkel Premium Sidoarjo"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       {/* Background neon glows in light theme */}
       <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] animate-pulse-slow pointer-events-none" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] pointer-events-none" />

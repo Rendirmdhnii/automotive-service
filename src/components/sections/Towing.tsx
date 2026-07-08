@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { PhoneCall, Truck, AlertTriangle, ShieldCheck, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
+import { ASSETS } from "@/lib/assets";
 
 const TOWING_CASES = [
   { title: "Mobil Mogok", desc: "Mesin mati mendadak di jalan tol, jalan raya, atau di rumah." },
@@ -130,7 +131,7 @@ export default function Towing() {
             <div className="relative rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] border border-brand-red/20 group aspect-[4/3] sm:aspect-video lg:aspect-[3/4]">
               {/* Unsplash Image - Flatbed towing truck towing a car */}
               <Image
-                src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80"
+                src={ASSETS.towing}
                 alt="Armada Mobil Towing Derek IPIN MOTOR"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

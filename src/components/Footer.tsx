@@ -2,7 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import { Wrench, Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
+import { ASSETS } from "@/lib/assets";
 
 export default function Footer() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -34,8 +36,14 @@ export default function Footer() {
               onClick={(e) => handleNavClick(e, "#")}
               className="flex items-center gap-2 group w-max mb-6 focus:outline-none"
             >
-              <div className="w-10 h-10 rounded-lg bg-brand-mint flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:rotate-12 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
-                <Wrench className="w-5 h-5 text-white" />
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:rotate-12 shadow-[0_0_15px_rgba(16,185,129,0.15)] bg-white/5 border border-white/10">
+                <Image
+                  src={ASSETS.logo}
+                  alt="IPIN MOTOR Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain w-full h-full p-1"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-poppins font-extrabold text-xl tracking-wider text-white">

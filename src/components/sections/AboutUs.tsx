@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Wrench, Shield, Zap, DollarSign, Settings, Smile } from "lucide-react";
 import Image from "next/image";
+import { ASSETS } from "@/lib/assets";
 
 const KEY_VALUES = [
   {
@@ -116,7 +117,7 @@ export default function AboutUs() {
             <div className="relative rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-black/5 group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
               {/* Unsplash Image - Premium mechanic working on car engine */}
               <Image
-                src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80"
+                src={ASSETS.aboutUs}
                 alt="Teknisi IPIN MOTOR sedang menservis mobil"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
