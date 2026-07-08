@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Wrench, Shield, Zap, DollarSign, Settings, Smile } from "lucide-react";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { ASSETS } from "@/lib/assets";
 
 const KEY_VALUES = [
@@ -116,13 +116,15 @@ export default function AboutUs() {
 
             <div className="relative rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-black/5 group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
               {/* Unsplash Image - Premium mechanic working on car engine */}
-              <Image
+              <SafeImage
                 src={ASSETS.aboutUs}
                 alt="Teknisi IPIN MOTOR sedang menservis mobil"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority={false}
+                fallbackName="Teknisi & Area Kerja"
+                fallbackIcon={Wrench}
               />
               
               {/* Image Gradient Vignette */}

@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search } from "lucide-react";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { ASSETS } from "@/lib/assets";
 
 const CATEGORIES = ["Semua", "Servis", "Towing", "Fasilitas"];
@@ -75,13 +75,14 @@ export default function Gallery() {
                 className="relative rounded-2xl overflow-hidden shadow-sm border border-black/5 aspect-square group cursor-pointer"
               >
                 {/* Image */}
-                <Image
+                <SafeImage
                   src={item.image}
                   alt={item.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
+                  fallbackName={item.title}
                 />
 
                 {/* Glass Hover Overlay */}

@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { PhoneCall, Truck, AlertTriangle, ShieldCheck, MapPin, Clock } from "lucide-react";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { ASSETS } from "@/lib/assets";
 
 const TOWING_CASES = [
@@ -108,7 +108,7 @@ export default function Towing() {
               className="w-full sm:w-max inline-flex items-center justify-center gap-3.5 px-10 py-5 rounded-2xl bg-brand-red hover:bg-brand-red-light text-white font-poppins font-extrabold text-lg transition-all duration-300 transform hover:-translate-y-1.5 shadow-[0_8px_30px_rgba(220,38,38,0.4)] border border-brand-red-light/35 relative overflow-hidden group"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              <PhoneCall className="w-6 h-6 animate-pulse" />
+              <PhoneCall className="w-6 h-6" />
               Panggil Towing Sekarang
             </a>
           </motion.div>
@@ -130,13 +130,15 @@ export default function Towing() {
 
             <div className="relative rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] border border-brand-red/20 group aspect-[4/3] sm:aspect-video lg:aspect-[3/4]">
               {/* Unsplash Image - Flatbed towing truck towing a car */}
-              <Image
+              <SafeImage
                 src={ASSETS.towing}
                 alt="Armada Mobil Towing Derek IPIN MOTOR"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority={false}
+                fallbackName="Armada Towing Derek"
+                fallbackIcon={Truck}
               />
               {/* Image Gradient Vignette */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent" />

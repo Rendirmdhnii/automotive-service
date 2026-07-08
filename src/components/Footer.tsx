@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Phone, MapPin, Clock } from "lucide-react";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { ASSETS } from "@/lib/assets";
 
 export default function Footer() {
@@ -36,11 +36,12 @@ export default function Footer() {
               className="flex items-center w-max mb-6 focus:outline-none"
             >
               <div className="relative h-10 w-36">
-                <Image
+                <SafeImage
                   src={ASSETS.logo}
                   alt="Logo IPIN MOTOR"
                   fill
                   className="object-contain object-left"
+                  fallbackName="Logo"
                 />
               </div>
             </Link>

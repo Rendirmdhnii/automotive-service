@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
-import Image from "next/image";
+import SafeImage from "@/components/SafeImage";
 import { ASSETS } from "@/lib/assets";
 
 const NAV_ITEMS = [
@@ -80,12 +80,13 @@ export default function Navbar() {
             className="flex items-center focus:outline-none"
           >
             <div className="relative h-10 sm:h-12 w-36 sm:w-44">
-              <Image
+              <SafeImage
                 src={ASSETS.logo}
                 alt="Logo IPIN MOTOR"
                 fill
                 className="object-contain object-left"
                 priority
+                fallbackName="Logo"
               />
             </div>
           </Link>

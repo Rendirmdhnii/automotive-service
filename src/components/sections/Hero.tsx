@@ -38,7 +38,7 @@ export default function Hero() {
       </div>
 
       {/* Background neon glows in light theme */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] animate-pulse-slow pointer-events-none" />
+      <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] pointer-events-none" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] pointer-events-none" />
 
       {/* Grid Pattern overlay */}
@@ -51,15 +51,15 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 w-full overflow-x-hidden">
-        {/* Tagline Badge */}
+        {/* Tagline Badge - Static & Elegant */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-mint/25 bg-brand-mint/10 backdrop-blur-md mb-8 shadow-[0_4px_15px_rgba(16,185,129,0.08)]"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50/80 mb-8 shadow-sm"
         >
-          <span className="w-2 h-2 rounded-full bg-brand-mint animate-ping" />
-          <span className="font-poppins text-xs font-semibold uppercase tracking-[0.25em] text-brand-mint-dark">
+          <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
+          <span className="font-poppins text-xs font-bold uppercase tracking-[0.25em] text-gray-500">
             KALIAN SEMUA LUAR BIASA
           </span>
         </motion.div>
