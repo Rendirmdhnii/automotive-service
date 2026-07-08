@@ -22,37 +22,31 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-screen-dynamic-height pt-32 pb-20 flex items-center justify-center overflow-hidden bg-black"
-      style={{
-        backgroundImage: "radial-gradient(circle at center, rgba(18, 18, 20, 0.4) 0%, rgba(11, 11, 12, 1) 90%), url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative min-screen-dynamic-height pt-36 pb-20 flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50/20 to-white"
     >
-      {/* Background Overlays for Premium Cinematic Feel */}
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent" />
-      <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-red/10 blur-[120px] animate-pulse-slow" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-brand-red/10 blur-[120px] animate-pulse-slow" />
+      {/* Background neon glows in light theme */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] animate-pulse-slow pointer-events-none" />
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-brand-mint/10 blur-[120px] pointer-events-none" />
 
       {/* Grid Pattern overlay */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(rgba(16,185,129,0.3) 1px, transparent 1px)",
           backgroundSize: "24px 24px"
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 w-full overflow-x-hidden">
         {/* Tagline Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-red/30 bg-brand-red/10 backdrop-blur-md mb-8 shadow-[0_0_15px_rgba(220,38,38,0.2)]"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-mint/25 bg-brand-mint/10 backdrop-blur-md mb-8 shadow-[0_4px_15px_rgba(16,185,129,0.08)]"
         >
-          <span className="w-2 h-2 rounded-full bg-brand-red animate-ping" />
-          <span className="font-poppins text-xs font-semibold uppercase tracking-[0.25em] text-white">
+          <span className="w-2 h-2 rounded-full bg-brand-mint animate-ping" />
+          <span className="font-poppins text-xs font-semibold uppercase tracking-[0.25em] text-brand-mint-dark">
             KALIAN SEMUA LUAR BIASA
           </span>
         </motion.div>
@@ -62,11 +56,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-poppins font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6"
+          className="font-poppins font-black text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight leading-[1.15] mb-6"
         >
-          <span className="text-white">INGAT BENGKEL MOBIL,</span>
+          <span className="text-gray-900">INGAT BENGKEL MOBIL,</span>
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-brand-red-light to-white text-glow-red">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint via-brand-mint-light to-brand-mint-dark text-glow-mint">
             INGAT IPIN MOTOR.
           </span>
         </motion.h1>
@@ -76,45 +70,55 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-3xl mx-auto font-inter text-base sm:text-xl text-brand-gray/90 leading-relaxed mb-12"
+          className="max-w-3xl mx-auto font-inter text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6"
         >
           Solusi servis mobil, perawatan berkala, dan layanan towing darurat 24 jam di Sidoarjo dengan teknisi berpengalaman dan peralatan modern.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* Operational Hours Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-100/80 text-emerald-800 border border-emerald-200/50 font-poppins text-xs font-bold uppercase tracking-wider mb-10"
+        >
+          BENGKEL BUKA: 08.00 - 23.00 WIB
+        </motion.div>
+
+        {/* CTA Buttons - Responsive Stacking */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+          className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 max-w-md md:max-w-none mx-auto w-full md:w-auto"
         >
-          {/* Booking Servis */}
+          {/* Booking Servis - Premium Black */}
           <a
             href="#booking"
             onClick={(e) => scrollToSection(e, "#booking")}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-white hover:bg-brand-silver text-black font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_20px_rgba(255,255,255,0.15)] group"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gray-900 hover:bg-black text-white font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_20px_rgba(0,0,0,0.15)] group"
           >
             <Calendar className="w-5 h-5 transition-transform group-hover:scale-110" />
             Booking Servis
           </a>
 
-          {/* Panggil Towing */}
+          {/* Panggil Towing - Urgent Red */}
           <a
             href="#towing"
             onClick={(e) => scrollToSection(e, "#towing")}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-red-light text-white font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_25px_rgba(220,38,38,0.35)] relative overflow-hidden group"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-red-light text-white font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 shadow-[0_4px_25px_rgba(220,38,38,0.25)] relative overflow-hidden group"
           >
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             <PhoneCall className="w-5 h-5 animate-bounce" />
             Panggil Towing (24J)
           </a>
 
-          {/* Hubungi Admin */}
+          {/* Hubungi Admin - Outline Button */}
           <a
             href="https://api.whatsapp.com/send/?phone=6282338325621"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border border-white/10 hover:border-brand-red/35 bg-white/5 hover:bg-brand-red/5 text-white hover:text-brand-red-light font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-md group"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border-2 border-gray-900 bg-transparent hover:bg-gray-50 text-gray-900 font-poppins font-bold text-base transition-all duration-300 transform hover:-translate-y-1 group"
           >
             <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
             Hubungi Admin
@@ -122,8 +126,8 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Decorative Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-brand-dark to-transparent pointer-events-none" />
+      {/* Decorative Bottom Fade in Light Theme */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );
 }

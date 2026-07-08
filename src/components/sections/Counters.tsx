@@ -84,7 +84,7 @@ export default function Counters() {
   };
 
   return (
-    <section id="counters" className="relative py-16 bg-brand-dark/40 border-y border-white/5 z-20">
+    <section id="counters" className="relative py-16 bg-gray-50/50 border-y border-gray-100 z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={containerRef}
@@ -99,26 +99,26 @@ export default function Counters() {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="glass-card-no-hover p-6 rounded-2xl flex items-center gap-5 border border-white/5 relative group overflow-hidden"
+                className="glass-card-no-hover p-6 rounded-2xl flex items-center gap-5 border border-gray-100 relative group overflow-hidden"
               >
                 {/* Decorative Hover Glow background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-mint/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Icon wrapper */}
-                <div className="w-14 h-14 rounded-xl bg-white/5 group-hover:bg-brand-red/10 flex items-center justify-center border border-white/10 group-hover:border-brand-red/35 transition-all duration-300 shadow-inner">
-                  <Icon className="w-6 h-6 text-brand-silver group-hover:text-brand-red-light transition-colors" />
+                <div className="w-14 h-14 rounded-xl bg-gray-100/80 group-hover:bg-brand-mint/10 flex items-center justify-center border border-gray-200/50 group-hover:border-brand-mint/30 transition-all duration-300 shadow-inner">
+                  <Icon className="w-6 h-6 text-gray-500 group-hover:text-brand-mint transition-colors" />
                 </div>
 
                 {/* Text Content */}
                 <div className="flex flex-col">
-                  <span className="font-poppins font-extrabold text-3xl sm:text-4xl text-white tracking-tight flex items-baseline">
+                  <span className="font-poppins font-extrabold text-3xl sm:text-4xl text-gray-900 tracking-tight flex items-baseline">
                     <CounterNumber value={stat.value} />
-                    <span className="text-brand-red text-2xl sm:text-3xl ml-0.5">{stat.suffix}</span>
+                    <span className="text-brand-mint text-2xl sm:text-3xl ml-0.5">{stat.suffix}</span>
                   </span>
-                  <span className="font-poppins font-semibold text-sm text-brand-silver/90 mt-1 tracking-wide">
+                  <span className="font-poppins font-bold text-sm text-gray-800 mt-0.5 tracking-wide">
                     {stat.label}
                   </span>
-                  <span className="font-inter text-xs text-brand-gray/80 mt-0.5">
+                  <span className="font-inter text-xs text-gray-500 mt-0.5">
                     {stat.description}
                   </span>
                 </div>

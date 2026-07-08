@@ -41,13 +41,13 @@ interface AccordionItemProps {
 
 function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProps) {
   return (
-    <div className="glass-card-no-hover rounded-2xl border border-white/5 overflow-hidden transition-all duration-300">
+    <div className="glass-card-no-hover rounded-2xl border border-black/5 overflow-hidden transition-all duration-300">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between p-5 text-left focus:outline-none hover:bg-white/[0.02] transition-colors"
+        className="w-full flex items-center justify-between p-5 text-left focus:outline-none hover:bg-black/[0.015] transition-colors"
       >
-        <span className="font-poppins font-bold text-sm sm:text-base text-white tracking-wide flex items-center gap-3">
-          <HelpCircle className="w-5 h-5 text-brand-red-light flex-shrink-0" />
+        <span className="font-poppins font-bold text-sm sm:text-base text-gray-900 tracking-wide flex items-center gap-3">
+          <HelpCircle className="w-5 h-5 text-brand-mint-dark flex-shrink-0" />
           {question}
         </span>
         <motion.div
@@ -55,7 +55,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
           transition={{ duration: 0.2 }}
           className="flex-shrink-0"
         >
-          <ChevronDown className="w-5 h-5 text-brand-gray" />
+          <ChevronDown className="w-5 h-5 text-gray-400" />
         </motion.div>
       </button>
 
@@ -67,8 +67,8 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
-            <div className="px-5 pb-5 pt-1 border-t border-white/5">
-              <p className="font-inter text-xs sm:text-sm text-brand-gray/95 leading-relaxed">
+            <div className="px-5 pb-5 pt-1 border-t border-black/5">
+              <p className="font-inter text-xs sm:text-sm text-gray-600 leading-relaxed">
                 {answer}
               </p>
             </div>
@@ -89,24 +89,24 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-24 bg-brand-dark/40 border-t border-white/5" ref={sectionRef}>
+    <section id="faq" className="relative py-24 bg-gray-50/50 border-t border-gray-100" ref={sectionRef}>
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-red/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-mint/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red">
+          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint">
             Tanya Jawab
           </span>
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mt-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mt-3">
             Pertanyaan yang Sering <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
               Diajukan (FAQ)
             </span>
           </h2>
-          <div className="w-20 h-1 bg-brand-red mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-brand-mint mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Accordions */}

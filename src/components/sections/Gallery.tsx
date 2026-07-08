@@ -69,24 +69,24 @@ export default function Gallery() {
   });
 
   return (
-    <section id="gallery" className="relative py-24 bg-brand-dark/40 border-y border-white/5" ref={sectionRef}>
+    <section id="gallery" className="relative py-24 bg-gray-50/50 border-y border-gray-100" ref={sectionRef}>
       {/* Background neon flares */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 rounded-full bg-brand-red/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-96 h-96 rounded-full bg-brand-mint/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red">
+          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint">
             Galeri Bengkel
           </span>
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mt-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mt-3">
             Dokumentasi & Aktivitas <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
               Harian IPIN MOTOR
             </span>
           </h2>
-          <div className="w-20 h-1 bg-brand-red mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-brand-mint mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Filter Buttons */}
@@ -97,8 +97,8 @@ export default function Gallery() {
               onClick={() => setActiveFilter(cat)}
               className={`px-5 py-2 rounded-full font-poppins text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
                 activeFilter === cat
-                  ? "bg-brand-red text-white shadow-[0_0_15px_rgba(220,38,38,0.4)]"
-                  : "border border-white/10 bg-white/5 text-brand-silver hover:bg-white/10 hover:text-white"
+                  ? "bg-brand-mint text-white shadow-[0_4px_15px_rgba(16,185,129,0.25)]"
+                  : "border border-black/5 bg-gray-100/50 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
               {cat}
@@ -106,7 +106,7 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Masonry/Grid Gallery */}
+        {/* Masonry/Grid Gallery - 1 col on mobile, 2/3/4 cols on desktop */}
         <motion.div
           layout
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -120,7 +120,7 @@ export default function Gallery() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 key={item.id}
-                className="relative rounded-2xl overflow-hidden shadow-lg border border-white/5 aspect-square group cursor-pointer"
+                className="relative rounded-2xl overflow-hidden shadow-sm border border-black/5 aspect-square group cursor-pointer"
               >
                 {/* Image */}
                 <Image
@@ -133,9 +133,9 @@ export default function Gallery() {
                 />
 
                 {/* Glass Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   {/* Category Tag */}
-                  <span className="w-max px-2.5 py-1 rounded bg-brand-red text-white font-poppins text-[10px] font-bold uppercase tracking-wider mb-2.5">
+                  <span className="w-max px-2.5 py-1 rounded bg-brand-mint text-white font-poppins text-[10px] font-bold uppercase tracking-wider mb-2.5">
                     {item.category}
                   </span>
                   
@@ -145,7 +145,7 @@ export default function Gallery() {
                   </h3>
 
                   {/* Search Icon Decor */}
-                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-red/90 flex items-center justify-center transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-mint/90 flex items-center justify-center transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
                     <Search className="w-4 h-4 text-white" />
                   </div>
                 </div>

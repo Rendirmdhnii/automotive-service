@@ -71,24 +71,24 @@ export default function ProcessTimeline() {
   };
 
   return (
-    <section id="process" className="relative py-24 bg-brand-dark/40 border-y border-white/5">
+    <section id="process" className="relative py-24 bg-gray-50/50 border-y border-gray-100">
       {/* Background radial gradient */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-red/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-mint/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red">
+          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint">
             Alur Kerja Kami
           </span>
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mt-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mt-3">
             Bagaimana Kami Merawat <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
               Kendaraan Anda
             </span>
           </h2>
-          <div className="w-20 h-1 bg-brand-red mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-brand-mint mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Timeline body */}
@@ -99,7 +99,7 @@ export default function ProcessTimeline() {
             variants={lineVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="absolute left-4 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-brand-red via-brand-red/50 to-white/10 origin-top transform md:-translate-x-1/2 hidden md:block"
+            className="absolute left-4 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-brand-mint via-brand-mint/50 to-gray-200 origin-top transform md:-translate-x-1/2 hidden md:block"
           />
           
           {/* Vertical Connecting Line (Mobile) */}
@@ -107,7 +107,7 @@ export default function ProcessTimeline() {
             variants={lineVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="absolute left-6 top-4 bottom-4 w-[2px] bg-gradient-to-b from-brand-red via-brand-red/50 to-white/10 origin-top md:hidden"
+            className="absolute left-6 top-4 bottom-4 w-[2px] bg-gradient-to-b from-brand-mint via-brand-mint/50 to-gray-200 origin-top md:hidden"
           />
 
           <div className="space-y-12">
@@ -123,7 +123,7 @@ export default function ProcessTimeline() {
                   } relative`}
                 >
                   {/* Timeline Dot Indicator */}
-                  <div className="absolute left-6 md:left-1/2 top-6 w-5 h-5 rounded-full border-4 border-brand-dark bg-brand-red -translate-x-[9px] md:-translate-x-2.5 z-20 shadow-[0_0_10px_rgba(220,38,38,0.6)]" />
+                  <div className="absolute left-6 md:left-1/2 top-6 w-5 h-5 rounded-full border-4 border-white bg-brand-mint -translate-x-[9px] md:-translate-x-2.5 z-20 shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
 
                   {/* Empty space for spacing on desktop */}
                   <div className="w-full md:w-1/2 hidden md:block" />
@@ -136,22 +136,22 @@ export default function ProcessTimeline() {
                     animate={isInView ? "visible" : "hidden"}
                     className="w-full md:w-1/2 pl-16 md:pl-0 md:px-8"
                   >
-                    <div className="glass-card p-6 rounded-2xl border border-white/5 relative group">
+                    <div className="glass-card p-6 rounded-2xl border border-black/5 relative group">
                       {/* Background Hover Glow */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-brand-mint/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
                       <div className="flex gap-4">
                         {/* Step Icon */}
-                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center shadow-inner group-hover:bg-brand-red group-hover:border-brand-red transition-all duration-300">
-                          <Icon className="w-5 h-5 text-brand-red-light group-hover:text-white transition-colors" />
+                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-mint/10 border border-brand-mint/20 flex items-center justify-center shadow-inner group-hover:bg-brand-mint group-hover:border-brand-mint transition-all duration-300">
+                          <Icon className="w-5 h-5 text-brand-mint-dark group-hover:text-white transition-colors" />
                         </div>
 
                         {/* Title & Desc */}
                         <div className="flex flex-col">
-                          <h3 className="font-poppins font-bold text-base text-white tracking-wide">
+                          <h3 className="font-poppins font-bold text-base text-gray-900 tracking-wide">
                             {step.title}
                           </h3>
-                          <p className="font-inter text-xs text-brand-gray/95 mt-1.5 leading-relaxed">
+                          <p className="font-inter text-xs text-gray-600 mt-1.5 leading-relaxed">
                             {step.desc}
                           </p>
                         </div>

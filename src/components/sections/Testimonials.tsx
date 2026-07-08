@@ -77,24 +77,24 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="relative py-24 bg-brand-dark overflow-hidden">
+    <section id="testimonials" className="relative py-24 bg-white overflow-hidden">
       {/* Background neon elements */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-brand-red/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-brand-mint/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red">
+          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint">
             Testimoni Pelanggan
           </span>
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mt-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mt-3">
             Apa Kata Mereka Tentang <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
               Pelayanan IPIN MOTOR?
             </span>
           </h2>
-          <div className="w-20 h-1 bg-brand-red mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-brand-mint mx-auto mt-6 rounded-full" />
         </div>
 
         {/* Testimonials Grid */}
@@ -109,37 +109,37 @@ export default function Testimonials() {
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between relative group"
+              className="glass-card p-6 rounded-2xl border border-black/5 flex flex-col justify-between relative group"
             >
               {/* Quote Icon Decor */}
-              <div className="absolute top-6 right-6 opacity-[0.05] group-hover:opacity-[0.12] transition-opacity duration-300 pointer-events-none">
-                <Quote className="w-12 h-12 text-white" />
+              <div className="absolute top-6 right-6 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity duration-300 pointer-events-none">
+                <Quote className="w-12 h-12 text-gray-400" />
               </div>
 
               <div>
                 {/* Stars Layout */}
                 <div className="flex items-center gap-1 mb-5">
                   {[...Array(testi.rating)].map((_, sIdx) => (
-                    <Star key={sIdx} className="w-4.5 h-4.5 fill-brand-red text-brand-red-light" />
+                    <Star key={sIdx} className="w-4.5 h-4.5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
                 {/* Review Text */}
-                <p className="font-inter text-xs text-brand-gray/95 leading-relaxed italic mb-6">
+                <p className="font-inter text-xs sm:text-sm text-gray-600 leading-relaxed italic mb-6">
                   &ldquo;{testi.comment}&rdquo;
                 </p>
               </div>
 
               {/* User Block */}
-              <div className="flex items-center gap-3.5 pt-4 border-t border-white/5">
-                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                  <User className="w-5 h-5 text-brand-silver" />
+              <div className="flex items-center gap-3.5 pt-4 border-t border-black/5">
+                <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200/50 flex items-center justify-center">
+                  <User className="w-5 h-5 text-gray-500" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-poppins font-bold text-sm text-white tracking-wide">
+                  <span className="font-poppins font-bold text-sm text-gray-900 tracking-wide">
                     {testi.name}
                   </span>
-                  <span className="font-inter text-[10px] text-brand-red-light font-medium tracking-wide">
+                  <span className="font-inter text-[10px] text-brand-mint-dark font-semibold tracking-wide">
                     {testi.car}
                   </span>
                 </div>

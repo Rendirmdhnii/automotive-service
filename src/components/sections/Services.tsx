@@ -121,28 +121,28 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative py-24 bg-brand-dark/60 border-t border-white/5">
+    <section id="services" className="relative py-24 bg-gray-50/50 border-t border-gray-100">
       {/* Background glowing lights */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-brand-red/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 rounded-full bg-brand-red/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-brand-mint/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 rounded-full bg-brand-mint/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red">
+          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint">
             Layanan Kami
           </span>
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mt-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mt-3">
             Solusi Perawatan & Servis Lengkap <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
               Untuk Kendaraan Anda
             </span>
           </h2>
-          <div className="w-20 h-1 bg-brand-red mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-brand-mint mx-auto mt-6 rounded-full" />
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - 1 col on mobile, 2/3/4 cols on desktop */}
         <motion.div
           ref={containerRef}
           variants={containerVariants}
@@ -156,25 +156,25 @@ export default function Services() {
               <motion.div
                 key={idx}
                 variants={cardVariants}
-                className="glass-card p-6 rounded-2xl flex flex-col justify-between"
+                className="glass-card p-6 rounded-2xl flex flex-col justify-between group"
               >
                 <div>
                   {/* Icon Block */}
-                  <div className="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center mb-5 shadow-inner">
-                    <Icon className="w-6 h-6 text-brand-red-light" />
+                  <div className="w-12 h-12 rounded-xl bg-brand-mint/10 border border-brand-mint/20 flex items-center justify-center mb-5 shadow-inner">
+                    <Icon className="w-6 h-6 text-brand-mint-dark" />
                   </div>
 
                   {/* Title & Desc */}
-                  <h3 className="font-poppins font-bold text-base text-white tracking-wide mb-3">
+                  <h3 className="font-poppins font-bold text-base text-gray-900 tracking-wide mb-3">
                     {srv.title}
                   </h3>
-                  <p className="font-inter text-xs text-brand-gray/90 leading-relaxed">
+                  <p className="font-inter text-xs text-gray-600 leading-relaxed">
                     {srv.desc}
                   </p>
                 </div>
 
                 {/* Card CTA decoration */}
-                <div className="flex items-center gap-1 text-[11px] font-poppins font-bold uppercase tracking-wider text-brand-red mt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-1 text-[11px] font-poppins font-bold uppercase tracking-wider text-brand-mint mt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span>Konsultasi Gratis</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </div>
@@ -185,12 +185,12 @@ export default function Services() {
 
         {/* Global Section Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="font-inter text-sm text-brand-gray/80 mb-4">
+          <p className="font-inter text-sm text-gray-500 mb-4">
             Butuh servis darurat panggilan atau konsultasi perbaikan khusus?
           </p>
           <a
             href="#booking"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-brand-red/40 hover:border-brand-red bg-brand-red/5 hover:bg-brand-red/10 text-brand-red-light hover:text-white font-poppins font-bold text-sm tracking-wide transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-brand-mint/45 hover:border-brand-mint bg-brand-mint/5 hover:bg-brand-mint/10 text-brand-mint-dark hover:text-white font-poppins font-bold text-sm tracking-wide transition-all"
           >
             Hubungi Mekanik Panggilan
           </a>

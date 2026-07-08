@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { CheckCircle2, Wrench, Shield, Zap, DollarSign, Settings, Smile } from "lucide-react";
+import { Wrench, Shield, Zap, DollarSign, Settings, Smile } from "lucide-react";
 import Image from "next/image";
 
 const KEY_VALUES = [
@@ -43,9 +43,9 @@ export default function AboutUs() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="relative py-24 bg-brand-dark overflow-hidden">
+    <section id="about" className="relative py-24 bg-white overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-brand-red/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-brand-mint/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={sectionRef}>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -57,22 +57,22 @@ export default function AboutUs() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7 flex flex-col"
           >
-            <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red mb-3">
+            <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint mb-3">
               Tentang Kami
             </span>
-            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mb-6">
+            <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mb-6">
               Dedikasi Terbaik untuk <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
                 Kesempurnaan Mobil Anda
               </span>
             </h2>
-            <p className="font-inter text-base text-brand-gray/95 leading-relaxed mb-8">
+            <p className="font-inter text-sm sm:text-base text-gray-600 leading-relaxed mb-8">
               IPIN MOTOR hadir sebagai bengkel mobil modern dan tepercaya di Sidoarjo. Kami melayani segala kebutuhan perawatan kendaraan Anda mulai dari tune up, kelistrikan, servis kaki-kaki, hingga layanan emergency towing 24 jam. Dengan komitmen pelayanan prima, kami memastikan setiap perjalanan Anda aman dan nyaman.
             </p>
 
             {/* Slogan Badge */}
-            <div className="mb-10 p-5 rounded-xl bg-white/[0.02] border-l-4 border-brand-red backdrop-blur-sm">
-              <p className="font-poppins font-bold text-lg text-white italic tracking-wide">
+            <div className="mb-10 p-5 rounded-xl bg-gray-50 border-l-4 border-brand-mint shadow-sm">
+              <p className="font-poppins font-bold text-base sm:text-lg text-gray-800 italic tracking-wide">
                 &ldquo;INGAT BENGKEL MOBIL, INGAT IPIN MOTOR.&rdquo;
               </p>
             </div>
@@ -83,14 +83,14 @@ export default function AboutUs() {
                 const Icon = val.icon;
                 return (
                   <div key={idx} className="flex gap-4 group">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-red/10 border border-brand-red/20 flex items-center justify-center group-hover:bg-brand-red group-hover:border-brand-red transition-all duration-300">
-                      <Icon className="w-5 h-5 text-brand-red-light group-hover:text-white transition-colors" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-mint/10 border border-brand-mint/20 flex items-center justify-center group-hover:bg-brand-mint group-hover:border-brand-mint transition-all duration-300">
+                      <Icon className="w-5 h-5 text-brand-mint-dark group-hover:text-white transition-colors" />
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="font-poppins font-semibold text-sm text-white tracking-wide">
+                      <h4 className="font-poppins font-bold text-sm text-gray-900 tracking-wide">
                         {val.title}
                       </h4>
-                      <p className="font-inter text-xs text-brand-gray/90 mt-1 leading-relaxed">
+                      <p className="font-inter text-xs text-gray-500 mt-1 leading-relaxed">
                         {val.desc}
                       </p>
                     </div>
@@ -108,12 +108,12 @@ export default function AboutUs() {
             className="lg:col-span-5 relative"
           >
             {/* Outline box decor */}
-            <div className="absolute -inset-4 rounded-3xl border border-brand-red/25 transform rotate-2 pointer-events-none scale-102" />
+            <div className="absolute -inset-4 rounded-3xl border border-brand-mint/20 transform rotate-2 pointer-events-none scale-102" />
             
             {/* Glow backing */}
-            <div className="absolute -inset-1 bg-gradient-to-tr from-brand-red to-white opacity-10 blur-xl rounded-3xl pointer-events-none" />
+            <div className="absolute -inset-1 bg-gradient-to-tr from-brand-mint to-teal-300 opacity-10 blur-xl rounded-3xl pointer-events-none" />
 
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+            <div className="relative rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-black/5 group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
               {/* Unsplash Image - Premium mechanic working on car engine */}
               <Image
                 src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80"
@@ -125,20 +125,20 @@ export default function AboutUs() {
               />
               
               {/* Image Gradient Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
 
               {/* Float Experience Badge */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl glass-card-no-hover border border-white/10 shadow-lg">
+              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl glass-card-no-hover border border-black/5 shadow-md">
                 <div className="flex items-center gap-4">
-                  <div className="text-3xl font-poppins font-black text-brand-red-light tracking-tighter">
+                  <div className="text-3xl font-poppins font-black text-brand-mint tracking-tighter">
                     15th
                   </div>
-                  <div className="w-[1px] h-10 bg-white/10" />
+                  <div className="w-[1px] h-10 bg-black/10" />
                   <div className="flex flex-col">
-                    <span className="font-poppins font-bold text-sm text-white tracking-wide">
+                    <span className="font-poppins font-bold text-sm text-gray-900 tracking-wide">
                       Pengalaman Sukses
                     </span>
-                    <span className="font-inter text-xs text-brand-gray/80">
+                    <span className="font-inter text-xs text-gray-500">
                       Merawat & Menyelamatkan Kendaraan
                     </span>
                   </div>

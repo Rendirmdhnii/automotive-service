@@ -84,27 +84,27 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section id="why-choose-us" className="relative py-24 bg-brand-dark overflow-hidden">
+    <section id="why-choose-us" className="relative py-24 bg-white overflow-hidden">
       {/* Decorative Blur light */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-brand-red/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-brand-mint/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-red">
+          <span className="font-poppins font-bold text-xs uppercase tracking-[0.2em] text-brand-mint">
             Kenapa Memilih Kami
           </span>
-          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white mt-3">
+          <h2 className="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-gray-900 mt-3">
             Komitmen Kami Menjaga <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-mint to-brand-mint-dark">
               Kualitas dan Kepercayaan Anda
             </span>
           </h2>
-          <div className="w-20 h-1 bg-brand-red mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-brand-mint mx-auto mt-6 rounded-full" />
         </div>
 
-        {/* Benefits Grid */}
+        {/* Benefits Grid - 1 col on mobile, 2/3/4 cols on desktop */}
         <motion.div
           ref={containerRef}
           variants={containerVariants}
@@ -118,21 +118,21 @@ export default function WhyChooseUs() {
               <motion.div
                 key={idx}
                 variants={cardVariants}
-                className="glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-start relative group"
+                className="glass-card p-6 rounded-2xl border border-black/5 flex flex-col justify-start relative group"
               >
                 {/* Background Hover Glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-mint/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
                 {/* Icon Wrapper */}
-                <div className="w-12 h-12 rounded-xl bg-white/5 group-hover:bg-brand-red/10 border border-white/10 group-hover:border-brand-red/35 flex items-center justify-center mb-5 transition-all duration-300">
-                  <Icon className="w-5 h-5 text-brand-silver group-hover:text-brand-red-light transition-colors" />
+                <div className="w-12 h-12 rounded-xl bg-gray-100/80 group-hover:bg-brand-mint/10 border border-gray-200/50 group-hover:border-brand-mint/30 flex items-center justify-center mb-5 transition-all duration-300">
+                  <Icon className="w-5 h-5 text-gray-500 group-hover:text-brand-mint-dark transition-colors" />
                 </div>
 
                 {/* Text Title & description */}
-                <h3 className="font-poppins font-bold text-base text-white tracking-wide mb-2">
+                <h3 className="font-poppins font-bold text-base text-gray-900 tracking-wide mb-2">
                   {item.title}
                 </h3>
-                <p className="font-inter text-xs text-brand-gray/95 leading-relaxed">
+                <p className="font-inter text-xs text-gray-600 leading-relaxed">
                   {item.desc}
                 </p>
               </motion.div>
