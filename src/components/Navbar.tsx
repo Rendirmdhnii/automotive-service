@@ -76,27 +76,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
-            href="#"
-            onClick={(e) => handleNavClick(e, "#")}
-            className="flex items-center gap-2 group focus:outline-none"
+            href="/"
+            className="flex items-center focus:outline-none"
           >
-            <div className="relative w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:rotate-12 shadow-[0_0_15px_rgba(16,185,129,0.15)] bg-gray-50 border border-black/5">
+            <div className="relative h-10 sm:h-12 w-36 sm:w-44">
               <Image
                 src={ASSETS.logo}
-                alt="IPIN MOTOR Logo"
-                width={40}
-                height={40}
-                className="object-contain w-full h-full p-1"
+                alt="Logo IPIN MOTOR"
+                fill
+                className="object-contain object-left"
                 priority
               />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-poppins font-extrabold text-xl tracking-wider text-gray-900 flex items-center">
-                IPIN <span className="text-brand-mint ml-1.5">MOTOR</span>
-              </span>
-              <span className="text-[9px] font-medium uppercase tracking-[0.2em] text-gray-500 -mt-1 group-hover:text-gray-900 transition-colors">
-                Premium Auto Service
-              </span>
             </div>
           </Link>
 

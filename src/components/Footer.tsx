@@ -32,26 +32,16 @@ export default function Footer() {
           {/* Column 1: Brand Info */}
           <div className="lg:col-span-4 flex flex-col">
             <Link
-              href="#"
-              onClick={(e) => handleNavClick(e, "#")}
-              className="flex items-center gap-2 group w-max mb-6 focus:outline-none"
+              href="/"
+              className="flex items-center w-max mb-6 focus:outline-none"
             >
-              <div className="relative w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:rotate-12 shadow-[0_0_15px_rgba(16,185,129,0.15)] bg-white/5 border border-white/10">
+              <div className="relative h-10 w-36">
                 <Image
                   src={ASSETS.logo}
-                  alt="IPIN MOTOR Logo"
-                  width={40}
-                  height={40}
-                  className="object-contain w-full h-full p-1"
+                  alt="Logo IPIN MOTOR"
+                  fill
+                  className="object-contain object-left"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-poppins font-extrabold text-xl tracking-wider text-white">
-                  IPIN <span className="text-brand-mint">MOTOR</span>
-                </span>
-                <span className="text-[9px] font-medium uppercase tracking-[0.2em] text-gray-400 -mt-1">
-                  Premium Auto Service
-                </span>
               </div>
             </Link>
 
